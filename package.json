@@ -2,7 +2,7 @@
   "name": "hikrr-2",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "engines": {
     "node": "17.8.0",
     "npm": "8.5.5"
