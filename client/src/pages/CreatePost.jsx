@@ -11,15 +11,19 @@ const CreatePost = (props) => {
   //set state of new post
   const [newPost, setNewPost] = useState({
     title: "",
+    address: "",
+    distance: "",
+    elevation: "",
     imgUrl: "",
     rating: "",
     content: "",
-    mapImg: "",
+    park: "",
+    mapUrl: "",
   });
 
   const getNewPost = async () => {
     await Client({
-      url: `posts/${userId}`,
+      url: `http://localhost:3001/posts/${userId}`,
       method: "post",
       data: newPost,
     });
@@ -54,6 +58,38 @@ const CreatePost = (props) => {
           <input
             className="input"
             type="text"
+            value={newPost.park}
+            onChange={handleChange}
+            name={"park"}
+            placeholder={"Park"}
+          />
+          <input
+            className="input"
+            type="text"
+            value={newPost.address}
+            onChange={handleChange}
+            name={"address"}
+            placeholder={"Address"}
+          />
+          <input
+            className="input"
+            type="text"
+            value={newPost.distance}
+            onChange={handleChange}
+            name={"distance"}
+            placeholder={"Length"}
+          />
+          <input
+            className="input"
+            type="text"
+            value={newPost.elevation}
+            onChange={handleChange}
+            name={"elevation"}
+            placeholder={"Elevation"}
+          />
+          <input
+            className="input"
+            type="text"
             value={newPost.imgUrl}
             onChange={handleChange}
             name={"imgUrl"}
@@ -78,9 +114,9 @@ const CreatePost = (props) => {
           <input
             className="in-cont input"
             type="text"
-            value={newPost.mapImg}
+            value={newPost.mapUrl}
             onChange={handleChange}
-            name={"mapImg"}
+            name={"mapUrl"}
             placeholder={"Map Image Url"}
           />
           <button className="sub-btn">Submit</button>

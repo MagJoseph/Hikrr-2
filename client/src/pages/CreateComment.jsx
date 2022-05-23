@@ -17,7 +17,7 @@ const CreateComment = () => {
   const getNewComment = async () => {
     console.log(newComment);
     await Client({
-      url: `comments/${id}`,
+      url: `http://localhost:3001/comments/${id}`,
       method: "post",
       data: newComment,
     });
