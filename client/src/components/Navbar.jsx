@@ -2,7 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Navbar = ({ handleLogOut, authenticated }) => {
-  return authenticated ? (
+ 
+ 
+  return (
     <div className="navnav">
       <nav className="navbar">
         <Link className="nav-item" to="/posts">
@@ -31,17 +33,17 @@ const Navbar = ({ handleLogOut, authenticated }) => {
         </Link>
       </nav>
     </div>
-  ) : (
-    <div className="navnav">
-      <nav>
-        {/* <Link className="nav-item" to="/login">
-         Login
-       </Link>
-       <Link className="nav-item" to="/register">
-         Register
-       </Link> */}
-      </nav>
-    </div>
+   
+    // <div className="navnav">
+    //   <nav>
+    //     {/* <Link className="nav-item" to="/login">
+    //      Login
+    //    </Link>
+    //    <Link className="nav-item" to="/register">
+    //      Register
+    //    </Link> */}
+    //   </nav>
+    //</div>
   );
 };
 

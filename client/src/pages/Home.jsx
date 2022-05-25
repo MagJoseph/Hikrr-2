@@ -14,7 +14,7 @@ const Home = () => {
       <div className="link-wrapper centered">
         <br></br>
         <div className="land-container">
-          <div className="landing">
+          {/* <div className="landing">
             <Link to="/register" className="link">
               Register
             </Link>
@@ -22,6 +22,11 @@ const Home = () => {
           <div className="landing">
             <Link className="link" to="/login">
               Log in
+            </Link>
+          </div> */}
+          <div className="landing">
+            <Link className="link" to="/posts">
+              Check out Trails
             </Link>
           </div>
         </div>

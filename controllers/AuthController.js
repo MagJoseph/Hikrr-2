@@ -11,7 +11,7 @@ const Login = async (req, res) => {
     });
     if (
       user &&
-      (await middleware.comparePassword(user.password, req.body.password))
+      (await middleware.comparePassword(user.passwordDigest, req.body.password))
     ) {
       let payload = {
         id: user.id,
