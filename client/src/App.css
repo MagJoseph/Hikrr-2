@@ -129,6 +129,7 @@ h1 {
   width: 200px;
   border-radius: 15px;
   color: black;
+  cursor: pointer;
 }
 
 .sub-btn:hover {

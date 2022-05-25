@@ -48,10 +48,8 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    let formName = !usernameList.includes(formValues.username);
-    let formEmail = !emailList.includes(formValues.email);
 
-    if (formName && formEmail) {
+    if (formValues.username && formValues.email) {
       await RegisterUser({
         firstName: formValues.firstName,
         lastName: formValues.lastName,
