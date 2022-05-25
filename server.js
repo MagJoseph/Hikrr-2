@@ -19,7 +19,7 @@ const userController = require("./controllers/UserController");
 const authController = require("./controllers/AuthController");
 
 //All Routes
-app.get("/", (req, res) => res.json({ message: "Server Works" }));
+//app.get("/", (req, res) => res.json({ message: "Server Works" }));
 
 //auth
 app.get(
