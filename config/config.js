@@ -11,8 +11,7 @@ module.exports = {
     dialect: "postgres",
   },
   production: {
-    database: "hikrr2_production",
-    host: "127.0.0.1",
+    database: "DATABASE_URL",
     dialect: "postgres",
     dialectOptions: {
       ssl: {
