@@ -20,7 +20,7 @@ const UpdatePost = (props) => {
 
   //select a post by id to update
   const getPostToUpdate = async () => {
-    await Client.put(`http://localhost:3001/posts/${props.postId}`, {
+    await Client.put(`/posts/${props.postId}`, {
       title: title,
       address: address,
       distance: distance,

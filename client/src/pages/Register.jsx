@@ -26,7 +26,7 @@ const Register = () => {
       let usernameArr = [];
       let emailArr = [];
 
-      let result = await Client.get(`http://localhost:3001/users_info`);
+      let result = await Client.get(`/users_info`);
       result.data.usernames.map((name) => {
         usernameArr.push(name.username);
       });

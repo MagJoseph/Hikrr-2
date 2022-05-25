@@ -17,7 +17,7 @@ const Posts = () => {
   };
 
   const getPosts = async () => {
-    const list = await Client.get(`http://localhost:3001/posts`);
+    const list = await Client.get(`/posts`);
     console.log(list.data);
     setPosts(list.data);
   };

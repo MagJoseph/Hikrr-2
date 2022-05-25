@@ -23,7 +23,7 @@ const CreatePost = (props) => {
 
   const getNewPost = async () => {
     await Client({
-      url: `http://localhost:3001/posts/${userId}`,
+      url: `/posts/${userId}`,
       method: "post",
       data: newPost,
     });
