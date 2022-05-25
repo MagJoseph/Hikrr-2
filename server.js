@@ -4,6 +4,7 @@ const cors = require("cors");
 const PORT = process.env.PORT || 3001;
 const app = express();
 const middleware = require("./middleware");
+const path = require('path')
 
 //Middleware
 app.use(cors());
