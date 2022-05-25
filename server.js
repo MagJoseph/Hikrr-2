@@ -52,5 +52,15 @@ app.put("/posts/:post_id", userController.UpdatePost);
 //delete
 app.delete("/posts/:post_id", userController.DeletePost);
 
+if (process.env.NODE_ENV === "production") {
+  app
+    .use(express.static(path.join(__dirname, "client/build")))
+    .get("*", (req, res) => {
+      res.sendFile(path.join(`${__dirname}/client/build/index.html`));
+    });
+}
+
+
+
 //Express Server
 app.listen(PORT, () => console.log(`Server Started On Port: ${PORT}`));
