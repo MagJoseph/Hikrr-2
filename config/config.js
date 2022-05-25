@@ -1,9 +1,9 @@
 require("dotenv").config();
 module.exports = {
   development: {
-    database: "hikrr2_development",
-    host: "127.0.0.1",
-    dialect: "postgres",
+    database: 'hikrr2_development',
+    host: '127.0.0.1',
+    dialect: 'postgres',
   },
   test: {
     database: "hikrr2_test",
@@ -11,8 +11,7 @@ module.exports = {
     dialect: "postgres",
   },
   production: {
-    database: "hikrr2_production",
-    host: "127.0.0.1",
+    use_env_variable: "DATABASE_URL",
     dialect: "postgres",
     dialectOptions: {
       ssl: {

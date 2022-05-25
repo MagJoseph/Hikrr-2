@@ -2,11 +2,11 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import Client from "../services/api";
 
-const Delete = (props) => {
+const Delete = ({ postId }) => {
   let navigate = useNavigate();
 
   const deletePost = async () => {
-    await Client.delete(`http://localhost:3001/posts/${props.postId}`);
+    await Client.delete(`/posts/${postId}`);
   };
 
   const handleDelete = () => {

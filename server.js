@@ -4,6 +4,7 @@ const cors = require("cors");
 const PORT = process.env.PORT || 3001;
 const app = express();
 const middleware = require("./middleware");
+const path = require('path')
 
 //Middleware
 app.use(cors());
@@ -18,7 +19,7 @@ const userController = require("./controllers/UserController");
 const authController = require("./controllers/AuthController");
 
 //All Routes
-app.get("/", (req, res) => res.json({ message: "Server Works" }));
+//app.get("/", (req, res) => res.json({ message: "Server Works" }));
 
 //auth
 app.get(
@@ -51,6 +52,16 @@ app.put("/posts/:post_id", userController.UpdatePost);
 
 //delete
 app.delete("/posts/:post_id", userController.DeletePost);
+
+if (process.env.NODE_ENV === "production") {
+  app
+    .use(express.static(path.join(__dirname, "client/build")))
+    .get("*", (req, res) => {
+      res.sendFile(path.join(`${__dirname}/client/build/index.html`));
+    });
+}
+
+
 
 //Express Server
 app.listen(PORT, () => console.log(`Server Started On Port: ${PORT}`));

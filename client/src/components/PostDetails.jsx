@@ -15,7 +15,7 @@ const PostDetails = (props) => {
   //get posts by id
   const getPost = async () => {
     const result = await Client.get(
-      `http://localhost:3001/posts/postdetail/${id}`
+      `/posts/postdetail/${id}`
     );
     console.log(result.data);
     console.log(result.data.onePost);

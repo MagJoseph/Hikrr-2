@@ -81,10 +81,8 @@ const GetTimes = async (req, res) => {
 
 const CreatePost = async (req, res) => {
   try {
-    const user_id = parseInt(req.params.user_id);
-    let postBody = {
-      user_id,
-      ...req.body,
+  let postBody = {
+    ...req.body,
     };
     const newPost = await Post.create(postBody);
     res.send(newPost);
